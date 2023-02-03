@@ -1,0 +1,18 @@
+@import '../../../AllGlobalStyles/GlobalVars.scss';
+
+.newitem-cell-container {
+	margin: 24px 18px 0px 18px;
+	border-bottom: 1px solid $DarkGrayishBlue;
+}
+
+.newitem-cell-title {
+	font-weight: 700;
+	color: $GrayishBlue;
+	margin: 0px 0px 12px 0px;
+}
+
+.newitem-cell-oneliner {
+	font-size: 0.9em;
+	color: $DarkGrayishBlue;
+	margin: 0px 0px 32px 0px;
+}

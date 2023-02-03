@@ -1,4 +1,5 @@
 import './Styles/HomePageStyle.scss'
+import {NewItemsListFrame} from '../Elements/NewItemsListFrame'
 import mobileImg from '../Images/image-web-3-mobile.jpg'
 import desktopImg from '../Images/image-web-3-desktop.jpg'
 
@@ -28,7 +29,7 @@ export const HomePage = (props: Props) => {
 				</section>
 
 				<aside className='home-page-new-items-list'>
-					List
+					<NewItemsListFrame />
 				</aside>
 			</div>
 
