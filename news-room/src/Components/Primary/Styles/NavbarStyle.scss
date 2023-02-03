@@ -1,0 +1,34 @@
+@import '../../../AllGlobalStyles/GlobalVars.scss';
+
+.main-nav {
+	background-color: $OffWhite;
+	top: $TOOLBAR_HEIGHT;
+	right: -50%;//0px;//-50%
+	width: 50%;
+	height: 65%;//$TOOLBAR_HEIGHT;
+
+	position: absolute;
+
+	overflow: hidden;
+	overflow-y: scroll;
+
+	display: flex;
+	flex-direction: column;
+	border-radius: 0px 0px 0px 0px;
+
+	align-items: center;
+	justify-content: space-around;
+}
+
+@media screen and (min-width: $MOBILE_BREAKPOINT) {
+	.main-nav {
+		background-color: transparent;
+		top: 0px;
+		left: 50%;
+		overflow-y: unset;
+		height: $TOOLBAR_HEIGHT;
+
+		flex-direction: row;
+		border-radius: 0px 8px 0px 0px;
+	}
+}

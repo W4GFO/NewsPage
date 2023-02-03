@@ -1,0 +1,119 @@
+@import '../../../AllGlobalStyles/GlobalVars.scss';
+
+.home-page {
+	width: 100%;
+	display: flow-root;
+	background-color: $OffWhite;
+
+	//overflow: hidden;
+	//overflow-y: scroll;
+	border-radius: 0px 0px 6px 6px;
+}
+
+.home-page-container {
+	display: grid;
+
+	grid-template-rows: 1fr 0.5fr 0.55fr 1.5fr;
+	grid-template-columns: 1fr;
+	grid-template-areas: 
+		"prim-graphic"
+		"prim-msg"
+		"prim-prev"
+		"items-list"
+		;
+
+	//border: 1px solid blue;
+}
+
+.home-page-primary-graphic-container {
+	grid-area: prim-graphic;
+}
+
+.home-page-primary-message {
+	color: black;
+	font-size: 2.6em;
+	font-weight: 800;
+
+	grid-area: prim-msg;
+	background-color: $OffWhite;
+}
+
+.home-page-primary-preview {
+	grid-area: prim-prev;
+	background-color: $OffWhite;
+}
+
+.home-page-preview-btn {
+	width: 155px;
+	height: 45px;
+	display: block;
+
+	border: 0;
+	background: none;
+	box-shadow: none;
+	border-radius: 0px;
+
+	margin-top: 16px;
+	font-size: 1.2em;
+	font-weight: 500;
+	color: lightcyan;
+	background-color:$SoftRed
+}
+
+.home-page-new-items-list {
+	grid-area: items-list;
+	background-color: bisque;
+}
+
+.home-page-primary-image {
+	width: 100%;
+	aspect-ratio: 1/1;
+	object-fit:contain;
+}
+
+.home-page-review-items {
+	width: 100%;
+	height: 380px;
+	border-radius: 0px 0px 6px 6px;
+	background-color: blue;
+}
+
+@media screen and (min-width: $MOBILE_BREAKPOINT) {
+	.home-page {
+		background-color: pink;
+	}
+
+	.home-page-container {
+		height: 455px;
+		grid-template-rows: repeat(2, 50%);
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas: 
+			"prim-graphic prim-graphic items-list"
+			"prim-msg     prim-prev    items-list"
+			;
+	}
+
+	.home-page-primary-image {
+		width: 100%;
+		aspect-ratio: 2/1;
+		object-fit:cover;
+	}
+
+	.home-page-primary-message {
+		font-size: 3.8em;
+		font-weight: 800;
+	}
+
+	.home-page-message-frame {
+		margin: 4px 0px 4px 8px;
+	}
+
+	.home-page-preview-frame {
+		margin: 12px 12px 0px 12px;
+	}
+
+	.home-page-review-items {
+		height: 180px;
+		background-color: blue;
+	}
+}
