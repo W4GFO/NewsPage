@@ -1,31 +1,27 @@
-import { useState } from 'react'
 import './Styles/NavbarFrameStyle.scss'
+import {useContext} from 'react'
 import logo from '../Images/logo.svg'
 import hamburger from '../Images/icon-menu.svg'
 import closeX from '../Images/icon-menu-close.svg'
+import {menuShowingContext} from './ParentPage'
 
-type Props = {}
+type Props = {
+	showHideMenu:() => void
+}
 
-export const NavbarFrame = (props: Props) => {
-	const [menueShowing, setMenuShowing] = useState<boolean>(true)
+export const NavbarFrame = ({showHideMenu}: Props) => {
 
-	const onShowingMenuChange = (show:boolean) => {
+	const menuShowingState:boolean = useContext<boolean>(menuShowingContext)
 
-		//Here to show the true proper way to call a useState. 
-		//This isn't really necessary for a boolean type, but
-		//is here for reference.
-		setMenuShowing(current => {
-			return !current
-		})
-	}
+	const imageFile:string = (menuShowingState === false) ? hamburger : closeX
 
 	return (
 		<div className='nav-frame-container'>
 			<div className='nav-frame-element nav-frame-element-logo'>
 				<img src={logo} alt='Brand logo' />
 			</div>
-			<div className='nav-frame-element nav-frame-element-hamburger'>
-				<img src={hamburger} alt='hamburger close menu button' />
+			<div className='nav-frame-element nav-frame-element-hamburger' onClick={() => {showHideMenu()}}>
+				<img src={imageFile} alt='hamburger close menu button' />
 			</div>
 		</div>
 	)

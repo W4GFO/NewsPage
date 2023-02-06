@@ -20,6 +20,37 @@
 	justify-content: space-around;
 }
 
+.main-nav.show-main-nav {
+	//right: 0%;
+	animation: show-menubar 0.5s ease-in-out;
+
+	border-bottom-left-radius: 6px;
+	border-left: 1px solid $DarkGrayishBlue;
+	border-bottom: 1px solid $DarkGrayishBlue;
+
+	animation-fill-mode: forwards;
+}
+
+.main-nav:not(.show-main-nav ) {
+	animation: hide-menubar 0.5s ease-in-out;
+
+	border-bottom-left-radius: none;
+	border-left: none;
+	border-bottom: none;
+}
+
+
+//We need to maintain the height of 80px which is the height of the header block
+@keyframes show-menubar {
+	from {right: -50%;}
+	to {right: 0%;}
+}
+
+@keyframes hide-menubar {
+	from {right: 0%;}
+	to {right: -50%;}
+}
+
 @media screen and (min-width: $MOBILE_BREAKPOINT) {
 	.main-nav {
 		background-color: transparent;
