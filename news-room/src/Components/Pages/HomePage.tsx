@@ -1,7 +1,12 @@
 import './Styles/HomePageStyle.scss'
+import {ReviewItem} from '../Elements/ReviewItem'
 import {NewItemsListFrame} from '../Elements/NewItemsListFrame'
 import mobileImg from '../Images/image-web-3-mobile.jpg'
 import desktopImg from '../Images/image-web-3-desktop.jpg'
+
+import gamingImg from '../Images/image-gaming-growth.jpg'
+import retroCompImg from '../Images/image-retro-pcs.jpg'
+import laptopImg from '../Images/image-top-laptops.jpg'
 
 type Props = {}
 
@@ -34,11 +39,15 @@ export const HomePage = (props: Props) => {
 			</div>
 
 			<div className='home-page-review-items'>
-
+				<ReviewItem index={1} title='Reviving Retro PCs' message='What happens when old PCs are given modern upgrades?' imgName={retroCompImg} />
+				<ReviewItem index={2} title='Top 10 Laptops of 2022' message='Our best picks for various needs and budgets.' imgName={laptopImg} />
+				<ReviewItem index={3} title='The Growth of Gaming' message='How the pandemic has sparked fresh opportunities.' imgName={gamingImg} />
 			</div>
 		</div>
 	)
 }
+
+
 
 /*
 <picture>

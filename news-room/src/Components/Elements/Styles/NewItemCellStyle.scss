@@ -8,11 +8,21 @@
 .newitem-cell-title {
 	font-weight: 700;
 	color: $GrayishBlue;
-	margin: 0px 0px 12px 0px;
+	margin: 42px 0px 12px 0px;
 }
 
 .newitem-cell-oneliner {
 	font-size: 0.9em;
 	color: $DarkGrayishBlue;
-	margin: 0px 0px 32px 0px;
+	margin:0px 0px 24px 0px;
+}
+
+@media screen and (min-width: $MOBILE_BREAKPOINT) {
+	.newitem-cell-title {
+		margin: 0px 0px 12px 0px;
+	}
+
+	.newitem-cell-oneliner {
+		margin: 0px 0px 32px 0px;
+	}
 }

@@ -1,0 +1,31 @@
+@import '../../../AllGlobalStyles/GlobalVars.scss';
+
+
+.reviewitem-container {
+	width: 30%;
+	border: 1px solid chartreuse;
+}
+// .reviewitem-image-frame {
+// 	width: 100px;
+// 	height: 50px;
+// 	overflow: hidden;
+// 	background-color: pink;
+// }
+
+.reviewitem-image {
+	width: 105px;
+}
+
+.reviewitem-index-text {
+	color: $DarkGrayishBlue;
+}
+
+.reviewitem-title-text {
+	color: $VeryDarkBlue;
+}
+
+.reviewitem-message-text {
+	color: $DarkGrayishBlue;
+}
+
+

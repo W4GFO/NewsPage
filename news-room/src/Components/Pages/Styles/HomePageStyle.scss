@@ -76,6 +76,10 @@
 	height: 380px;
 	border-radius: 0px 0px 6px 6px;
 	background-color: blue;
+
+	overflow: hidden;
+
+	display: flex;
 }
 
 @media screen and (min-width: $MOBILE_BREAKPOINT) {
@@ -113,7 +117,7 @@
 	}
 
 	.home-page-review-items {
-		height: 180px;
+		height: 200px;
 		background-color: blue;
 	}
 }
