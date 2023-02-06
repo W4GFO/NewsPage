@@ -31,4 +31,9 @@
 		flex-direction: row;
 		border-radius: 0px 8px 0px 0px;
 	}
+
+	.main-nav-element:hover {
+		cursor: pointer;
+		color: $SoftRed;
+	}
 }
