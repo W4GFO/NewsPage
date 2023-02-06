@@ -1,0 +1,41 @@
+@import '../../../AllGlobalStyles/GlobalVars.scss';
+
+.nav-frame-container {
+	width: 100%;
+	display: flex;
+	height: $TOOLBAR_HEIGHT;
+	background-color: $OffWhite;
+	border-radius: 8px 8px 0px 0px;
+
+	align-items: center;
+}
+
+.nav-frame-element {
+	flex: 1;
+	display: flex;
+}
+
+.nav-frame-element-logo {
+	justify-content: flex-start;
+}
+
+.nav-frame-element-logo img {
+	margin-left: 16px;
+}
+
+.nav-frame-element-hamburger {
+	justify-content: flex-end;
+}
+
+.nav-frame-element-hamburger img {
+	width: 38px;
+	height: 32px;
+	margin-right: 16px;
+}
+
+@media screen and (min-width: $MOBILE_BREAKPOINT) {
+	.nav-frame-element-hamburger img {
+		visibility: hidden;
+	}
+}
+

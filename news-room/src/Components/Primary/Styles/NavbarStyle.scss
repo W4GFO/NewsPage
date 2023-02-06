@@ -1,0 +1,70 @@
+@import '../../../AllGlobalStyles/GlobalVars.scss';
+
+.main-nav {
+	background-color: $OffWhite;
+	top: $TOOLBAR_HEIGHT;
+	right: -50%;//0px;//-50%
+	width: 50%;
+	height: 65%;//$TOOLBAR_HEIGHT;
+
+	position: absolute;
+
+	overflow: hidden;
+	overflow-y: scroll;
+
+	display: flex;
+	flex-direction: column;
+	border-radius: 0px 0px 0px 0px;
+
+	align-items: center;
+	justify-content: space-around;
+}
+
+.main-nav.show-main-nav {
+	//right: 0%;
+	animation: show-menubar 0.5s ease-in-out;
+
+	border-bottom-left-radius: 6px;
+	border-left: 1px solid $DarkGrayishBlue;
+	border-bottom: 1px solid $DarkGrayishBlue;
+
+	animation-fill-mode: forwards;
+}
+
+.main-nav:not(.show-main-nav ) {
+	animation: hide-menubar 0.5s ease-in-out;
+
+	border-bottom-left-radius: none;
+	border-left: none;
+	border-bottom: none;
+}
+
+
+//We need to maintain the height of 80px which is the height of the header block
+@keyframes show-menubar {
+	from {right: -50%;}
+	to {right: 0%;}
+}
+
+@keyframes hide-menubar {
+	from {right: 0%;}
+	to {right: -50%;}
+}
+
+@media screen and (min-width: $MOBILE_BREAKPOINT) {
+	.main-nav {
+		background-color: transparent;
+		top: 0px;
+		left: 50%;
+		overflow-y: unset;
+		height: $TOOLBAR_HEIGHT;
+
+		flex-direction: row;
+		border-radius: 0px 8px 0px 0px;
+	}
+
+	.main-nav-element:hover {
+		cursor: pointer;
+		color: $SoftRed;
+	}
+}

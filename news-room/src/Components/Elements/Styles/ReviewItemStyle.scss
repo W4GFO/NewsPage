@@ -1,0 +1,78 @@
+@import '../../../AllGlobalStyles/GlobalVars.scss';
+
+$LEADING_EDGE:18px;
+
+.reviewitem-container {
+	display: grid;
+
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 2fr;
+	grid-template-areas: 
+	"item-img item-index"
+	"item-img item-title"
+	"item-img item-message";
+}
+
+.reviewitem-image-frame {
+	grid-area: item-img;
+	align-self: center;
+	justify-self: center;
+}
+
+.reviewitem-index-frame {
+	grid-area: item-index;
+	align-self: center;
+}
+
+.reviewitem-title-frame {
+	grid-area: item-title;
+	color: $VeryDarkBlue;
+	font-weight: 800;
+}
+
+.reviewitem-message-frame {
+	grid-area: item-message;
+	align-self: flex-end;
+}
+
+.reviewitem-image {
+	width: 100%;
+	aspect-ratio:1/1.5;
+	justify-self: center;
+}
+
+.reviewitem-index-text {
+	font-size: 2.0em;
+	font-weight: 400;
+
+	margin: 0px 0px 0px $LEADING_EDGE;
+	color: $DarkGrayishBlue;
+}
+
+.reviewitem-title-text {
+	margin: 12px 0px 0px $LEADING_EDGE;
+	color: $VeryDarkBlue;
+}
+
+.reviewitem-message-text {
+	line-height: 24px;
+	padding-bottom: 8px;
+	margin: -8px 0px 0px $LEADING_EDGE;
+	color: $DarkGrayishBlue;
+}
+
+.reviewitem-title-text:hover {
+	cursor: pointer;
+	color: $SoftRed;
+}
+
+@media screen and (min-width: $MOBILE_BREAKPOINT) {
+	.reviewitem-container {
+		flex: 1;
+	}
+
+	.reviewitem-image {
+		width: 100%;
+		height: 100%;
+	}
+}

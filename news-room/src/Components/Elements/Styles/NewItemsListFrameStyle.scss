@@ -1,0 +1,17 @@
+@import '../../../AllGlobalStyles/GlobalVars.scss';
+
+.newitems-list-from-container {
+	width: 100%;
+	height: 100%;
+	background-color: $VeryDarkBlue;
+
+	overflow: hidden;
+	overflow-y: scroll;
+}
+
+.newitems-header-text {
+	font-size: 2.5em;
+	font-weight: 600;
+	color: $SoftOrange;
+	margin: 8px 0px 0px 16px;
+}
